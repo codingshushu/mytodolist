@@ -36,8 +36,58 @@ body{
     padding:0px;
 }
 
-.task{
+#task{
     display:flex;
     justify-content: space-between;
     padding: 1em;
+}
+
+
+.task-done{
+    text-decoration: line-through;
+    background-color: lightgrey;
+    width: 800px;
+    height: 50px;
+    
+}
+
+.btn{
+    background-color: none; /* Blue background */
+  border: none; /* Remove borders */
+  color: green; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+.btn:hover {
+    background-color: RoyalBlue;
+  }
+
+  .btn1{
+    background-color: none; /* Blue background */
+  border: none; /* Remove borders */
+  color: yellow; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+.btn1:hover {
+    background-color: royalblue;
+  }
+
+#ongoing-items{
+    cursor: pointer;
+}
+
+#all-items{
+        cursor: pointer;
+    }
+    
+#done{
+        cursor: pointer;
+    }
+.change-gray{
+    background-color: lightgray;
 }
