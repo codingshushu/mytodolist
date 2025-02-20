@@ -1,45 +1,66 @@
 body{
     margin:0;
     background-image : url("images/background.jpg");
-    background-repeat : no-repeat;
+    background-repeat : repeat;
     background-size: cover;
 }
 
+.title{
+    display:flex;
+    justify-content: center;
+    padding-top : 50px;
+}
+
 .container{
+    font-family:"Gamja Flower";
+    font-size:large;
     background-color: white;
-    min-height: 100vh;
+    min-height: 60vh;
+    margin-top : 200px;
+    border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.scroll-container {
+    height: 10px;
+    overflow-y: scroll;
 }
 
 .task-area{
     border:1px solid lightgray;
     margin-top: 2em;
+    border-radius: 10px;
 }
 
 .task-tabs{
     display:flex;
     border-bottom: 1px solid lightgray;
     position:relative;
+
 }
 
 .task-tabs div{
     padding:1em;
+    cursor: pointer;
+    
 }
 
-#under-line{
-    height: 4px;
+#horizontal-underline{
+    height: 5px;
     background-color: pink;
     position:absolute;
-    width:80px;
+    width:50px;
     left:0px;
-    top:52px;
+    top:0px;
     padding:0px;
+    transition:0.5s
 }
 
 #task{
     display:flex;
     justify-content: space-between;
     padding: 1em;
+    border-bottom: 1px solid lightgray;
 }
 
 
@@ -48,7 +69,6 @@ body{
     background-color: lightgrey;
     width: 800px;
     height: 50px;
-    
 }
 
 .btn{
@@ -77,7 +97,7 @@ body{
     background-color: royalblue;
   }
 
-#ongoing-items{
+/* #ongoing-items{
     cursor: pointer;
 }
 
@@ -87,7 +107,43 @@ body{
     
 #done{
         cursor: pointer;
-    }
+    } */
+
 .change-gray{
     background-color: lightgray;
+}
+
+@media (max-width: 400px) {
+    h1.title {
+        font-size: 20px;
+    }
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .task-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    .task-tabs div {
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .input-area {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #task-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #add-button {
+        width: 100%;
+    }
 }
